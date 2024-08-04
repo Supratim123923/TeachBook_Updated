@@ -1,0 +1,67 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model TeachBook.Web.Models.ViewModels.AddBlogPostRequest
+<div class="container">
+    <h3>Add Blog For Admin</h3>
+</div>
+
+<div class=" container py-5">
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">Heading</label>
+            <input type="text" id="heading" class="form-control" asp-for="Heading" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Page Title</label>
+            <input type="text" id="pagetitle" class="form-control" asp-for="PageTitle" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Content</label>
+            <textarea id="content" class="form-control" asp-for="Content"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Short Description</label>
+            <input type="text" id="shortdesc" class="form-control" asp-for="ShortDescription" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Featured Image URL</label>
+            <input type="text" id="featuredimgurl" class="form-control" asp-for="FeaturedImgUrl" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">URL Handle</label>
+            <input type="text" id="urlhandle" class="form-control" asp-for="UrlHandle" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Published Date</label>
+            <input type="date" id="publisheddate" class="form-control" asp-for="PublishedDate" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Author</label>
+            <input type="text" id="author" class="form-control" asp-for="Author" />
+        </div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="visible" asp-for="Visible">
+            <label class="form-check-label">
+                Is Visible?
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Tags</label>
+            <select  multiple="multiple" class="form-select" asp-items="@Model.Tags" asp-for="SelectedItems"></select>
+        </div>
+
+        <div class="mb-3">
+            <button class="btn-dark" type="submit">
+                Submit
+            </button>
+        </div>
+
+
+
+    </form>
+
+</div>
