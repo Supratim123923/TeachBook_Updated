@@ -1,4 +1,5 @@
 ﻿using Azure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TeachBook.Web.Data;
 using TeachBook.Web.Models.Domain_Model;
@@ -7,6 +8,7 @@ using TeachBook.Web.Repositories;
 
 namespace TeachBook.Web.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminTagsController : Controller
     {
        // private readonly TeachBookDBContext _teachBookDBContext;

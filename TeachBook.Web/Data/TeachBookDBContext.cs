@@ -4,7 +4,7 @@ namespace TeachBook.Web.Data
 {
     public class TeachBookDBContext : DbContext
     {
-        public TeachBookDBContext(DbContextOptions options) : base(options)
+        public TeachBookDBContext(DbContextOptions<TeachBookDBContext> options) : base(options)
         {
         }
         public DbSet<BlogPost> BlogPosts { get; set; }
